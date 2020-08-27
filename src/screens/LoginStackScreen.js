@@ -7,7 +7,7 @@ import SiteEngineerProjectScreen from './SiteEngineerProjectScreen';
 
 const HomeStack = createStackNavigator();
 
-const MainStackScreen = () => (
+const LoginStackScreen = () => (
     <HomeStack.Navigator headerMode='none'>
         <HomeStack.Screen name="Login" component={LoginScreen}  />
         <HomeStack.Screen name="New Password" component={PasswordRecoveryScreen}  />
@@ -15,4 +15,4 @@ const MainStackScreen = () => (
     </HomeStack.Navigator>
 );
 
-export default MainStackScreen;
+export default LoginStackScreen;

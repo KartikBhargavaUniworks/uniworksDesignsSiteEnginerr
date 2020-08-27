@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { Text, View, StyleSheet, Dimensions, Picker } from 'react-native';
+import React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
 import { Checkbox } from 'react-native-paper'
-import Feather from 'react-native-vector-icons/FontAwesome'
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import FeatherIcon from "react-native-vector-icons/Feather";
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const ActivityList = () => {
 
@@ -12,7 +9,7 @@ const ActivityList = () => {
         {
             id: 1,
             name: "Activity 1",
-            checked:false
+            checked:true
         },
         {
             id: 2,
@@ -31,7 +28,7 @@ const ActivityList = () => {
         {
             id: 5,
             name: "Activity 5",
-            checked:false
+            checked:true
         }]
 
         function handleChange(check, Key) {

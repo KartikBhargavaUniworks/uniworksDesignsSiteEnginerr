@@ -51,7 +51,7 @@ const DropDownProjectNames = () => {
                         projectNames.map((prop, id) =>{
                             return(
                                 <TouchableOpacity>
-                                    <Text key={id}  >{prop.name} </Text>
+                                    <Text   >{prop.name} </Text>
                                 </TouchableOpacity>
                             )
                         })
@@ -59,7 +59,6 @@ const DropDownProjectNames = () => {
                 </View>
                 :
                 null}
-
         </View>
     )
 }

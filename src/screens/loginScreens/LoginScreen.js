@@ -71,7 +71,7 @@ function LoginScreen({ navigation }) {
           </TouchableOpacity>
         </View>
         <View style={styles.bottomContainer}>
-          <TouchableOpacity onPress={()=>navigation.navigate('Site Engineer Project Screen')} >
+          <TouchableOpacity onPress={()=>navigation.navigate('HomeScreen')} >
             <View >
               <View style={styles.icon1Stack}>
                 <FeatherIcon name="arrow-right" style={styles.icon1}></FeatherIcon>
