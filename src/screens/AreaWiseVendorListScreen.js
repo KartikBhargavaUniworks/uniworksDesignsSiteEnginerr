@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { View, StyleSheet, Text, ProgressBarAndroid } from 'react-native'
 import { ScrollView, TouchableOpacity, FlatList } from 'react-native-gesture-handler'
 import DropDownPicker from 'react-native-dropdown-picker';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
@@ -29,7 +29,14 @@ class AreaWiseVendorListScreen extends Component {
 
                 }, {
                     name: 'Area 4'
-                }]
+                }],
+            data: [{
+                name: 'Vendor 1'
+            }, {
+                name: 'Vendor 2'
+            }, {
+                name: 'Vendor 3'
+            }]
         };
     }
 
@@ -76,6 +83,23 @@ class AreaWiseVendorListScreen extends Component {
         return (
             <TouchableOpacity style={{ alignSelf: 'center', marginVertical: '5%' }} >
                 <Text>{item.name}</Text>
+            </TouchableOpacity>
+        )
+    }
+    renderVendorNames = ({ item }) => {
+        return (
+            <TouchableOpacity style={{backgroundColor: '#FBFBFB',marginHorizontal: '5%'}} >
+                <View style={{ flex: 1, height: 100, backgroundColor: '#FBFBFB', flexDirection: 'row', marginHorizontal: '5%' }} >
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', alignSelf: 'center', marginLeft: 15 }} >{item.name}</Text>
+                    <View style={{ flex: 1, flexDirection: 'row' }} />
+                    <MaterialIcons name='keyboard-arrow-right' style={{ alignSelf: 'center', marginRight: 15 }} size={30} />
+                </View>
+                <ProgressBarAndroid
+                    styleAttr="Horizontal"
+                    style={{color:'#2180ff',marginHorizontal:'10%',bottom:15}}
+                    indeterminate={false}
+                    progress={0.5}
+                />
             </TouchableOpacity>
         )
     }
@@ -132,6 +156,14 @@ class AreaWiseVendorListScreen extends Component {
                         :
                         null
                 }
+
+                <FlatList
+                    style={{ marginTop: 15 }}
+                    data={this.state.data}
+                    keyExtractor={item => item.name}
+                    renderItem={this.renderVendorNames}
+                    ItemSeparatorComponent={this.renderSeparator}
+                />
 
             </View>
         )
