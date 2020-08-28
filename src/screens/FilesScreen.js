@@ -12,15 +12,18 @@ class FilesScreen extends Component{
             data:[
                 {
                     id:1,
-                    name:'Project 1'
+                    name:'Project 1',
+                    address:'10909, Walnut Block Indu Fortune FieldsKPHB'
                 },
                 {
                     id:2,
-                    name:'Project 2'
+                    name:'Project 2',
+                    address:'40101, Olive BlockIndu Fortune FieldsKPHB'
                 },
                 {
                     id:3,
-                    name:'Project 3'
+                    name:'Project 3',
+                    address:'80904, Pine BlockIndu Fortune FieldsKPHB'
                 }
             ]
         }
