@@ -88,7 +88,7 @@ class AreaWiseVendorListScreen extends Component {
     }
     renderVendorNames = ({ item }) => {
         return (
-            <TouchableOpacity style={{backgroundColor: '#FBFBFB',marginHorizontal: '5%'}} >
+            <TouchableOpacity style={{backgroundColor: '#FBFBFB',marginHorizontal: '5%'}} onPress={()=>this.props.navigation.navigate('Site Engineer Project Screen')}>
                 <View style={{ flex: 1, height: 100, backgroundColor: '#FBFBFB', flexDirection: 'row', marginHorizontal: '5%' }} >
                     <Text style={{ fontSize: 20, fontWeight: 'bold', alignSelf: 'center', marginLeft: 15 }} >{item.name}</Text>
                     <View style={{ flex: 1, flexDirection: 'row' }} />
