@@ -2,11 +2,9 @@ import React from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import InventoryScreen from '../screens/BottomTabScreens/InventoryScreen';
-import MaterialScreen from '../screens/BottomTabScreens/MaterialScreen';
-import ConstructionScreen from '../screens/BottomTabScreens/ConstructionScreen';
 import TrackScreen from '../screens/BottomTabScreens/TrackScreen';
 import HomeScreen from '../screens/BottomTabScreens/HomeScreen';
+import InventoryScreen from '../screens/InventoryScreen';
 
 const Tab = createBottomTabNavigator();
 const HomeTabScreen = () => (
@@ -26,17 +24,6 @@ const HomeTabScreen = () => (
       }}
     />
     <Tab.Screen
-      name="Material"
-      component={MaterialScreen}
-      options={{
-        tabBarLabel: 'Material',
-        tabBarColor: '#694fad',
-        tabBarIcon: ({ color }) => (
-          <MaterialIcons name="store" color={color} size={26} />
-        ),
-      }}
-    />
-    <Tab.Screen
       name="Home Page"
       component={HomeScreen}
       options={{
@@ -47,19 +34,6 @@ const HomeTabScreen = () => (
         ),
       }}
     />
-    
-        <Tab.Screen
-          name="Construction"
-          component={ConstructionScreen}
-          options={{
-            tabBarLabel: 'Construction',
-            tabBarColor: '#1f65ff',
-            tabBarIcon: ({ color }) => (
-              <MaterialIcons name="build" color={color} size={26} />
-            ),
-          }}
-        />
-    
 
     <Tab.Screen
       name="Track"

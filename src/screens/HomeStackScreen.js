@@ -7,6 +7,7 @@ import HomeTabScreen from '../components/HomeBottomTab';
 import AreaWiseVendorListScreen from './AreaWiseVendorListScreen';
 import FilesScreen from './FilesScreen';
 import BookNewScreen from './BookNewScreen';
+import MaterialScreen from './BottomTabScreens/MaterialScreen';
 
 const HomeStack = createStackNavigator();
 
@@ -24,6 +25,7 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name="AreaWiseVendorList" component={AreaWiseVendorListScreen} />
     <HomeStack.Screen name="FilesScreen" component={FilesScreen} />
     <HomeStack.Screen name="BookNewScreen" component={BookNewScreen} />
+    <HomeStack.Screen name="MaterialScreen" component={MaterialScreen} />
   </HomeStack.Navigator>
 );
 

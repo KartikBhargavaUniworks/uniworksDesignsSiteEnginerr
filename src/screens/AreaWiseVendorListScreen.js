@@ -116,15 +116,20 @@ class AreaWiseVendorListScreen extends Component {
                     speed={1}
                 />
                 <View style={{ marginTop: '10%' }} >
-                    <DropDownPicker
-                        items={[
-                            { label: 'France', value: 'fr' },
-                            { label: 'Spain', value: 'es' },
-                        ]}
-                        defaultNull
-                        placeholder="Project Name"
-                        containerStyle={{ height: 40 }}
-                        onChangeItem={item => this.changeCountry(item)}
+                <DropDownPicker
+                    items={[
+                        { label:'Option A', value:'Option A'},
+                        { label:'Option B', value:'Option B'},
+                        { label:'Option C', value:'Option C'},
+                    ]}
+                   placeholder='Project'
+                   placeholderStyle={{color:'#2180ff'}}
+                   arrowColor='#2180ff'
+                    containerStyle={{ height: 60, marginHorizontal:'10%'}}
+                    style={{ backgroundColor: '#fafafa', }}
+                    dropDownStyle={{ backgroundColor: '#fafafa'}}
+                    onChangeItem={item => console.log(item)}
+                    labelStyle={{color:'#2180ff'}}
                     />
                 </View>
                 <View style={{ flexDirection: 'row', marginTop: '5%' }} >
