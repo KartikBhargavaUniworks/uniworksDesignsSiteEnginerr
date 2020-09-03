@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 import { TouchableOpacity, FlatList } from 'react-native-gesture-handler'
 
-
 class InventoryScreen extends Component{
 
     constructor(props){
