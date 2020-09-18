@@ -123,7 +123,7 @@ class SiteEngineerProjectScreen extends Component {
         return (
             <View
                 style={{
-                    height: 10
+                    height: 3
                 }}
             />
         );
@@ -139,12 +139,7 @@ class SiteEngineerProjectScreen extends Component {
     }
     renderTools = ({ item }) => {
         return (
-            <View style={{ flexDirection: 'row' }} >
-                <CheckBox
-                    disabled={false}
-                    value={item.checked}
-                    onValueChange={(bool) => this.changeValueCheckBox(item, bool)}
-                />
+            <View style={{ flexDirection: 'row', marginStart: 50 }} >
                 <Text style={{ fontSize: 14 }} >{item.name}</Text>
             </View>
         )
@@ -248,36 +243,51 @@ class SiteEngineerProjectScreen extends Component {
                         renderItem={this.renderPrerequisites}
                         ItemSeparatorComponent={this.renderSeparator}
                     />
-                    <Text style={{ alignSelf: 'center', fontSize: 25, color: '#000000', marginTop: 25 }} >Tools and Workforce</Text>
-                    <FlatList
-                        style={{ marginTop: 20, marginHorizontal: '10%' }}
-                        data={this.state.tools}
-                        renderItem={this.renderTools}
-                        ItemSeparatorComponent={this.renderSeparator}
-                    />
-                    <TextInput
-                        placeholder='Skilled'
-                        keyboardType='numeric'
-                        placeholderTextColor='#aaaaaa'
-                        style={{ height: 40, width: 60, backgroundColor: '#D1D1D1', marginTop: 20, marginHorizontal: '10%', textAlign: 'center' }}
-                    />
-                    <TextInput
-                        placeholder='Skilled'
-                        keyboardType='numeric'
-                        placeholderTextColor='#aaaaaa'
-                        style={{ height: 40, width: 60, backgroundColor: '#D1D1D1', marginTop: 20, marginHorizontal: '10%', textAlign: 'center' }}
-                    />
-                    <View style={{ flexDirection: 'row', marginTop: 20, marginHorizontal: '10%' }} >
-                        <TextInput
-                            placeholder='Skilled'
-                            keyboardType='numeric'
-                            placeholderTextColor='#aaaaaa'
-                            style={{ height: 40, width: 120, backgroundColor: '#D1D1D1', textAlign: 'center' }}
-                        />
-                        <View style={{ flex: 1, flexDirection: 'row' }} />
-                        <TouchableOpacity style={{ backgroundColor: '#0099FF', borderRadius: 10, height: 40, width: 90, justifyContent: 'center' }} >
-                            <Text style={{ alignSelf: 'center', color: '#ffffff' }} >Submit</Text>
-                        </TouchableOpacity>
+                    <Text style={{ alignSelf: 'center', fontSize: 25, color: '#000000', marginTop: 25 }} >Daily Checklist</Text>
+                    <View style={{ flexDirection: 'row' }} >
+                        <View style={{ marginTop: 40, width: 40, backgroundColor: '#FF2600', height: 400, borderTopRightRadius: 30, borderBottomRightRadius: 30 }} >
+                            <View style={{transform:[{rotateY:-90}]}} >
+                            <Text style={{
+                                color:'#ffffff'
+                            }} > Morning Checklist</Text>
+                            </View>
+                        </View>
+                        <View style={{ marginTop: 40 }} >
+                            <View style={{ flexDirection: 'row', marginStart: 10 }} >
+                                <CheckBox />
+                                <Text style={{ marginStart: 8, alignSelf: 'center' }} >Toolbox</Text>
+                            </View>
+                            <FlatList
+                                style={{ marginTop: 10, marginStart: 10 }}
+                                data={this.state.tools}
+                                renderItem={this.renderTools}
+                                ItemSeparatorComponent={this.renderSeparator}
+                            />
+                            <TextInput
+                                placeholder='Skilled'
+                                keyboardType='numeric'
+                                placeholderTextColor='#aaaaaa'
+                                style={{ height: 40, width: 60, backgroundColor: '#D1D1D1', marginHorizontal: '10%', textAlign: 'center' }}
+                            />
+                            <TextInput
+                                placeholder='Skilled'
+                                keyboardType='numeric'
+                                placeholderTextColor='#aaaaaa'
+                                style={{ height: 40, width: 60, backgroundColor: '#D1D1D1', marginTop: 20, marginHorizontal: '10%', textAlign: 'center' }}
+                            />
+                            <View style={{ flexDirection: 'row', marginTop: 20, marginHorizontal: '10%' }} >
+                                <TextInput
+                                    placeholder='Skilled'
+                                    keyboardType='numeric'
+                                    placeholderTextColor='#aaaaaa'
+                                    style={{ height: 40, width: 120, backgroundColor: '#D1D1D1', textAlign: 'center' }}
+                                />
+                                <View style={{ flex: 1, flexDirection: 'row' }} />
+                                <TouchableOpacity style={{ backgroundColor: '#0099FF', borderRadius: 10, height: 40, width: 90, justifyContent: 'center' }} >
+                                    <Text style={{ alignSelf: 'center', color: '#ffffff' }} >Submit</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
                     </View>
                     <Text style={{ alignSelf: 'center', fontSize: 25, color: '#000000', marginTop: 35 }} >Milestones</Text>
                     <FlatList
